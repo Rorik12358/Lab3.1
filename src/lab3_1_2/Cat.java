@@ -1,6 +1,5 @@
-package lab3_2;
+package lab3_1_2;
 
-import java.io.BufferedReader;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
@@ -12,13 +11,16 @@ public class Cat {
     public static void main(String[] args) {
         try {
             FileReader file = new FileReader(args[0]);
-            while (file.read() != -1){
-                System.out.println(file.read());
+            int ch;
+            while ((ch = file.read()) != -1) {
+                System.out.println((char) ch);
             }
         } catch (FileNotFoundException e) {
             e.printStackTrace();
         } catch (IOException e) {
             e.printStackTrace();
         }
+        char c = 300;
+        System.out.println(c);
     }
 }
